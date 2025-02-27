@@ -10,7 +10,7 @@
 /*
 Added to designer JVM Argument for automatic login
 
--Dautologin.username=admin;-Dautologin.password=password;-Djavaws.ignition.loglevel=INFO;-Djavaws.ignition.debug=true;-Dproject.name=module-test-project
+-Dautologin.username=admin;-Dautologin.password=password;-Djavaws.ignition.loglevel=INFO;-Djavaws.ignition.debug=true;-Dproject.name=module-test-project;-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=*:8001
 
  */
 
