@@ -1,23 +1,14 @@
 package org.ocularscada.devtools.gateway
 
-import java.util.List
-import java.util.Optional
-import javax.servlet.http.HttpServletResponse
 
+import java.util.Optional
 import com.inductiveautomation.ignition.common.licensing.LicenseState
-import com.inductiveautomation.ignition.common.project.resource.adapter.ResourceTypeAdapterRegistry
 import com.inductiveautomation.ignition.common.script.ScriptManager
 import com.inductiveautomation.ignition.common.script.hints.PropertiesFileDocProvider
-import com.inductiveautomation.ignition.gateway.dataroutes.RouteGroup
 import com.inductiveautomation.ignition.gateway.model.AbstractGatewayModuleHook
 import com.inductiveautomation.ignition.gateway.model.GatewayContext
-import com.inductiveautomation.ignition.gateway.web.models.ConfigCategory
-import com.inductiveautomation.ignition.gateway.web.models.IConfigTab
-import com.inductiveautomation.ignition.gateway.web.pages.config.overviewmeta.ConfigOverviewContributor
-import com.inductiveautomation.ignition.gateway.web.pages.status.overviewmeta.OverviewContributor
 import org.ocularscada.devtools.common.TagScripts
 import org.ocularscada.devtools.common.Constants
-import java.util.*
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
