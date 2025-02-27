@@ -6,7 +6,7 @@ class TagScripts {
 
     @ScriptFunction(docBundlePrefix="TagScripts")
     fun helloWorld(name: String): String {
-        return "Hello $name"
+        return "Hello there $name"
     }
 
 

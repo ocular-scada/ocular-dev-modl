@@ -7,6 +7,14 @@
  * Gradle Docs: https://docs.gradle.org/current/userguide/userguide.html
  */
 
+/*
+Added to designer JVM Argument for automatic login
+
+-Dautologin.username=admin;-Dautologin.password=password;-Djavaws.ignition.loglevel=INFO;-Djavaws.ignition.debug=true;-Dproject.name=module-test-project
+
+ */
+
+
 plugins {
     id("io.ia.sdk.modl") version("0.4.0")
     kotlin("jvm") version "1.9.23"
@@ -28,6 +36,11 @@ allprojects {
     version = "0.0.1-SNAPSHOT"
 }
 
+tasks {
+    deployModl {
+        hostGateway.set("http://ignition-mod-dev:18088")
+    }
+}
 ignitionModule {
     /*
      * Human readable name of the module, as will be displayed on the gateway status page
