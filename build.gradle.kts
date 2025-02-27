@@ -8,13 +8,21 @@
  */
 
 plugins {
-
-
     id("io.ia.sdk.modl") version("0.4.0")
     kotlin("jvm") version "1.9.23"
 }
 
-val sdk_version by extra("8.1.20")
+dependencies {
+    implementation(kotlin("stdlib-jdk8"))
+}
+
+kotlin {
+    jvmToolchain(8)
+}
+
+
+
+val sdk_version by extra("8.1.35")
 
 allprojects {
     version = "0.0.1-SNAPSHOT"
@@ -99,8 +107,8 @@ ignitionModule {
      * Example entry: "com.myorganization.vectorizer.VectorizerDesignerHook" to "D"
      */
     hooks.putAll(mapOf(
-        "org.ocularscada.devtools.gateway.OcularDevToolsGatewayHook" to "G",
-        "org.ocularscada.devtools.designer.OcularDevToolsDesignerHook" to "D"
+        "org.ocularscada.devtools.gateway.GatewayHook" to "G",
+        "org.ocularscada.devtools.designer.DesignerHook" to "D"
     ))
 
     /*
@@ -121,12 +129,7 @@ ignitionModule {
     skipModlSigning.set(true)
 }
 
-/*
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-}
 
-kotlin {
-    jvmToolchain(8)
-}
-*/
+
+
+
